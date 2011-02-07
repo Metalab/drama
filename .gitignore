@@ -1,0 +1,12 @@
+.bundle
+log/*.log
+tmp/**/*
+.*.swp
+.rvmrc
+Thumbs.db
+tags
+rerun.txt
+capybara-*.html
+.bundle
+vendor/ruby/**/*
+bin/
