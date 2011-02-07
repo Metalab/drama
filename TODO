@@ -1,0 +1,48 @@
+Features:
+general
+------------
+auditable or versioned data
+
+
+calendar
+----------
+add / edit events as authenticated, active member
+room based collision warnings 
+view as calendar or list
+ical feed
+
+
+members
+----------
+import data from MOS
+online joining form
+export for entry system
+mailman sync
+announce mails to all active members
+user self service pages (incl. password resets)
+statistics (member counts, depts)
+export and import for bank collection
+
+
+Kassomat backend
+----------
+product list
+inventory management
+authentication
+prepaid accounts
+print product index with barcodes
+
+
+accounting
+----------
+
+
+shelfspace
+-----------
+
+SSO (maybe)
+-----------
+admin
+self service pages
+wiki
+mailing lists
