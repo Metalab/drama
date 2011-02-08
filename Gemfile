@@ -22,8 +22,9 @@ gem 'dm-aggregates',        DM_VERSION
 gem 'dm-timestamps',        DM_VERSION
 gem 'dm-observer',          DM_VERSION
 gem 'dm-is-list',           DM_VERSION
+gem 'dm-rails'
 gem 'dm-devise'
-gem 'dm-paperclip', :git => 'git://github.com/abangratz/dm-paperclip.git'
+gem 'carrierwave'
 
 
 
