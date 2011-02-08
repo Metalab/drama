@@ -38,7 +38,7 @@ group :development, :test do
   gem 'autotest-rails'
   gem 'test_notifier'
   gem 'factory_girl_rails'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
   gem 'capybara'
   gem 'rcov'
   gem 'rcov_rails'

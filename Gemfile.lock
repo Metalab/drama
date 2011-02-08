@@ -6,6 +6,15 @@ GIT
       datamapper
       extlib
 
+GIT
+  remote: git://github.com/aslakhellesoy/cucumber-rails.git
+  revision: f3002faf12560dc7a7dc16cafb282ffbbf892029
+  specs:
+    cucumber-rails (0.4.0.beta.1)
+      cucumber (~> 0.10.0)
+      nokogiri (~> 1.4.4)
+      rack-test (~> 0.5.6)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -72,8 +81,6 @@ GEM
       gherkin (~> 2.3.2)
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
-    cucumber-rails (0.3.2)
-      cucumber (>= 0.8.0)
     culerity (0.2.15)
     data_objects (0.10.3)
       addressable (~> 2.1)
@@ -294,7 +301,7 @@ DEPENDENCIES
   capistrano
   capistrano-ext
   capybara
-  cucumber-rails
+  cucumber-rails!
   database_cleaner
   dm-aggregates (~> 1.0.2)
   dm-constraints (~> 1.0.2)
