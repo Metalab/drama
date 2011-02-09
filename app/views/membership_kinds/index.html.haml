@@ -1,0 +1,21 @@
+%h1 Listing membership_kinds
+
+%table
+  %tr
+    %th Name
+    %th Fee
+    %th
+    %th
+    %th
+
+  - @membership_kinds.each do |membership_kind|
+    %tr
+      %td= membership_kind.name
+      %td= membership_kind.fee
+      %td= link_to 'Show', membership_kind
+      %td= link_to 'Edit', edit_membership_kind_path(membership_kind)
+      %td= link_to 'Destroy', membership_kind, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Membership kind', new_membership_kind_path

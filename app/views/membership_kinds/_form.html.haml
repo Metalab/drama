@@ -1,0 +1,16 @@
+= form_for @membership_kind do |f|
+  -if @membership_kind.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@membership_kind.errors.count, "error")} prohibited this membership_kind from being saved:"
+      %ul
+        - @membership_kind.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :fee
+    = f.text_field :fee
+
+  .actions
+    = f.submit 'Save'

@@ -6,7 +6,7 @@ gem 'jquery-rails'
 gem 'capistrano'
 gem 'capistrano-ext'
 
-gem 'haml'
+gem 'haml-rails'
 
 gem 'pg'
 

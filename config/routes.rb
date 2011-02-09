@@ -1,6 +1,8 @@
 Drama::Application.routes.draw do
   devise_for :members
 
+  resources :membership_kinds
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
