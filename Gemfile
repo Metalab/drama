@@ -22,8 +22,9 @@ gem 'dm-aggregates',        DM_VERSION
 gem 'dm-timestamps',        DM_VERSION
 gem 'dm-observer',          DM_VERSION
 gem 'dm-is-list',           DM_VERSION
+gem 'dm-rails'
 gem 'dm-devise'
-gem 'dm-paperclip', :git => 'git://github.com/abangratz/dm-paperclip.git'
+gem 'carrierwave'
 
 
 
@@ -38,7 +39,7 @@ group :development, :test do
   gem 'autotest-rails'
   gem 'test_notifier'
   gem 'factory_girl_rails'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
   gem 'capybara'
   gem 'rcov'
   gem 'rcov_rails'
