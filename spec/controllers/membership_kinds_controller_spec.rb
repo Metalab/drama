@@ -20,7 +20,7 @@ describe MembershipKindsController do
 
   describe "GET show" do
     it "assigns the requested membership_kind as @membership_kind" do
-      MembershipKind.stub(:find).with("37") { mock_membership_kind }
+      MembershipKind.stub(:get).with("37") { mock_membership_kind }
       get :show, :id => "37"
       assigns(:membership_kind).should be(mock_membership_kind)
     end
@@ -36,7 +36,7 @@ describe MembershipKindsController do
 
   describe "GET edit" do
     it "assigns the requested membership_kind as @membership_kind" do
-      MembershipKind.stub(:find).with("37") { mock_membership_kind }
+      MembershipKind.stub(:get).with("37") { mock_membership_kind }
       get :edit, :id => "37"
       assigns(:membership_kind).should be(mock_membership_kind)
     end
@@ -75,19 +75,19 @@ describe MembershipKindsController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested membership_kind" do
-        MembershipKind.stub(:find).with("37") { mock_membership_kind }
+        MembershipKind.stub(:get).with("37") { mock_membership_kind }
         mock_membership_kind.should_receive(:update_attributes).with({'these' => 'params'})
         put :update, :id => "37", :membership_kind => {'these' => 'params'}
       end
 
       it "assigns the requested membership_kind as @membership_kind" do
-        MembershipKind.stub(:find) { mock_membership_kind(:update_attributes => true) }
+        MembershipKind.stub(:get) { mock_membership_kind(:update_attributes => true) }
         put :update, :id => "1"
         assigns(:membership_kind).should be(mock_membership_kind)
       end
 
       it "redirects to the membership_kind" do
-        MembershipKind.stub(:find) { mock_membership_kind(:update_attributes => true) }
+        MembershipKind.stub(:get) { mock_membership_kind(:update_attributes => true) }
         put :update, :id => "1"
         response.should redirect_to(membership_kind_url(mock_membership_kind))
       end
@@ -95,13 +95,13 @@ describe MembershipKindsController do
 
     describe "with invalid params" do
       it "assigns the membership_kind as @membership_kind" do
-        MembershipKind.stub(:find) { mock_membership_kind(:update_attributes => false) }
+        MembershipKind.stub(:get) { mock_membership_kind(:update_attributes => false) }
         put :update, :id => "1"
         assigns(:membership_kind).should be(mock_membership_kind)
       end
 
       it "re-renders the 'edit' template" do
-        MembershipKind.stub(:find) { mock_membership_kind(:update_attributes => false) }
+        MembershipKind.stub(:get) { mock_membership_kind(:update_attributes => false) }
         put :update, :id => "1"
         response.should render_template("edit")
       end
@@ -110,13 +110,13 @@ describe MembershipKindsController do
 
   describe "DELETE destroy" do
     it "destroys the requested membership_kind" do
-      MembershipKind.stub(:find).with("37") { mock_membership_kind }
+      MembershipKind.stub(:get).with("37") { mock_membership_kind }
       mock_membership_kind.should_receive(:destroy)
       delete :destroy, :id => "37"
     end
 
     it "redirects to the membership_kinds list" do
-      MembershipKind.stub(:find) { mock_membership_kind }
+      MembershipKind.stub(:get) { mock_membership_kind }
       delete :destroy, :id => "1"
       response.should redirect_to(membership_kinds_url)
     end
